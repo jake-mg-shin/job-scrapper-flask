@@ -29,9 +29,11 @@ def extract_job(data):
 
 def extract_jobs(job_data):
     jobs = []
+    n = 0
 
     for data in job_data:
-        print(f'Scrapping ROK')
+        n += 1
+        print(f'Scrapping ROK: Page {n}')
         job = extract_job(data)
         jobs.append(job)
 

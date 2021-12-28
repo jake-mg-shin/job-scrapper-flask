@@ -43,9 +43,11 @@ def extract_jobs(get_links):
     links = get_links
 
     jobs = []
+    n = 0
 
     for link in links:
-        print(f'Scrapping WWR')
+        n += 1
+        print(f'Scrapping WWR: Page {n}')
         result = requests.get(link)
         soup = BeautifulSoup(result.text, 'html.parser')
         results = soup.find_all('section', class_='jobs')

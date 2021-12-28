@@ -31,7 +31,7 @@ def extract_jobs(last_page, URL):
     jobs = []
 
     for page in range(last_page):
-        print(f'Scrapping SOF: Page{page+1}')
+        print(f'Scrapping SOF: Page {page+1}')
         result = requests.get(f'{URL}&pg={page+1}')
         soup = BeautifulSoup(result.text, 'html.parser')
         results = soup.find_all('div', class_='-job')

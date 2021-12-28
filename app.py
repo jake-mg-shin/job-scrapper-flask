@@ -4,7 +4,7 @@ from wwr import get_jobs as get_wwr_jobs
 from rok import get_jobs as get_rok_jobs
 from save import save_to_file
 
-app = Flask('JobScrapper')
+app = Flask(__name__)
 
 fakeDB = {}
 
@@ -62,4 +62,5 @@ def export():
         return redirect('/')
 
 
-# app.run(host='0.0.0.0')
+if __name__=="__main__":
+    app.run(host="127.0.0.1", port="5000", debug=True)
