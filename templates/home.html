@@ -11,6 +11,8 @@
 	</head>
 
 	<body>
+		<!-- The part of the Title on the page -->
+
 		<div class="container">
 			<div class="content">
 				<h1 class="title">RemoteJobSearcher</h1>
@@ -30,5 +32,41 @@
 				</form>
 			</div>
 		</div>
+
+		<!-- The part of the Job Lists on the page -->
+
+		{% if jobs %}
+		<div class="container-jobs">
+			<div class="content-jobs">
+				<h1>Search Results</h1>
+			</div>
+			<div class="content-jobs">
+				<h3>
+					Found
+					<span class="resultsNumber">{{resultsNumber}}</span> results
+					for: <span class="searchingBy">{{searchingBy}}</span>
+				</h3>
+			</div>
+			<div class="content-jobs end">
+				<a class="export" href="/export?word={{searchingBy}}"
+					>Export to CSV</a
+				>
+			</div>
+			<div class="jobs">
+				{% for job in jobs %}
+				<div class="card">
+					<div class="card-inside">
+						<span class="title">{{job.title}}</span>
+						<span class="company">{{job.company}}</span>
+					</div>
+
+					<button>
+						<a href="{{job.link}}" target="_blank">Apply</a>
+					</button>
+				</div>
+				{% endfor%}
+			</div>
+		</div>
+		{% endif %}
 	</body>
 </html>

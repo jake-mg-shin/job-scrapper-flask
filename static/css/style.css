@@ -19,6 +19,8 @@ h6 {
 	font-family: 'Courier New', monospace;
 }
 
+/* 1. The part of Title on the page 👇🏻 */
+
 .container {
 	background: rgb(63, 94, 251);
 	background: radial-gradient(
@@ -72,6 +74,102 @@ input:focus {
 }
 
 .submit:hover {
+	background: var(--color-n2);
+	cursor: pointer;
+}
+
+/* 2. The part of Job lists on the page 👇🏻 */
+
+.container-jobs {
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+}
+
+.content-jobs {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+}
+
+.resultsNumber {
+	color: red;
+}
+
+.searchingBy {
+	color: blue;
+}
+
+.end {
+	justify-content: flex-end !important;
+	margin: 0 150px;
+}
+
+.export {
+	padding: 10px;
+	background: var(--color-n6);
+	border: none;
+	color: var(--color-white);
+
+	transition: background-color 0.2s ease-out;
+}
+
+.export:hover {
+	background: var(--color-n5);
+	cursor: pointer;
+}
+
+.jobs {
+	display: grid;
+	gap: 10px;
+	grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+	margin: 0 150px;
+	padding-top: 30px;
+}
+
+.card {
+	display: grid;
+	grid-template-rows: 150px;
+	background: var(--color-n3);
+	opacity: 0.9;
+	border: none;
+	color: var(--color-white);
+}
+
+.card-inside {
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+}
+
+.company {
+	color: var(--color-n6);
+}
+
+span {
+	font-weight: bold;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+a {
+	text-decoration: none;
+	color: var(--color-white);
+}
+
+button {
+	background: var(--color-n1);
+	padding: 10px;
+	border: none;
+	text-align: center;
+	display: inline-block;
+	font-size: 15px;
+
+	transition: background-color 0.2s ease-out;
+}
+
+button:hover {
 	background: var(--color-n2);
 	cursor: pointer;
 }
