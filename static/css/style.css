@@ -19,9 +19,14 @@ h6 {
 	font-family: 'Courier New', monospace;
 }
 
+.flex {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 /* 1. The part of Title on the page 👇🏻 */
 
-.container {
+/* .container {
 	background: rgb(63, 94, 251);
 	background: radial-gradient(
 		circle,
@@ -35,9 +40,9 @@ h6 {
 
 	width: 100%;
 	height: 800px;
-}
+} */
 
-.content {
+/* .content {
 	padding: 5px;
 }
 
@@ -47,14 +52,14 @@ h6 {
 
 input {
 	padding: 8px;
-}
+} */
 
-input:focus {
+/* input:focus {
 	background: var(--color-n6);
 	color: var(--color-white);
-}
+} */
 
-.search {
+/* .search {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -76,11 +81,11 @@ input:focus {
 .submit:hover {
 	background: var(--color-n2);
 	cursor: pointer;
-}
+} */
 
 /* 2. The part of Job lists on the page 👇🏻 */
 
-.container-jobs {
+/* .container-jobs {
 	width: 100%;
 	height: auto;
 	margin: 0 auto;
@@ -172,4 +177,4 @@ button {
 button:hover {
 	background: var(--color-n2);
 	cursor: pointer;
-}
+} */

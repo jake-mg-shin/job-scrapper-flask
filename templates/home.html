@@ -3,10 +3,15 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Job Scrapper</title>
+		<title>RemoteJobSearcher</title>
 		<link
 			rel="stylesheet"
 			href="{{ url_for('static', filename='css/style.css') }}"
+		/>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
 		/>
 	</head>
 
@@ -14,23 +19,41 @@
 		<!-- The part of the Title on the page -->
 
 		<div class="container">
-			<div class="content">
-				<h1 class="title">RemoteJobSearcher</h1>
-				<form class="search" action="/report" method="get">
-					<div class="content">
+			<div class="ui secondary header menu">
+				<h2 class="item">RemoteJobSearcher</h2>
+			</div>
+			<img
+				class="ui centered huge image"
+				src="/static/images/img1/13038.jpg"
+				alt="main logo"
+			/>
+
+			<h1 class="ui center aligned header">
+				Let's find your future job for that now!
+			</h1>
+
+			<form
+				class="ui form"
+				style="padding-top: 1em"
+				action="/report"
+				method="get"
+			>
+				<div class="flex">
+					<div class="ui input focus">
 						<input
 							type="text"
-							placeholder="
-  search for a job"
+							placeholder="search for a job"
 							required
 							name="word"
 						/>
 					</div>
-					<div class="content">
-						<button class="submit">Search</button>
-					</div>
-				</form>
-			</div>
+					<button class="ui button" type="submit">Search</button>
+				</div>
+			</form>
+		</div>
+
+		<div class="container">
+			<div class="content"></div>
 		</div>
 
 		<!-- The part of the Job Lists on the page -->
@@ -68,5 +91,12 @@
 			</div>
 		</div>
 		{% endif %}
+
+		<script
+			src="https://code.jquery.com/jquery-3.6.0.min.js"
+			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			crossorigin="anonymous"
+		></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 	</body>
 </html>
